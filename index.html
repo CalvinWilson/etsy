@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Etsy</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+		<div id="head">
+			<div id="headtext">
+				<h1> Etsy </h1>
+				<form id="searchbar">
+					<input type="text" name="search" placeholder="Search for items or shops" value="whiskey">
+					<input type="submit" value="Search">
+				</form>
+				<span><a class="headlink" href="#"> Sell on Etsy </a></span>
+				<span><a class="headlink" href="#"> Register </a></span>
+				<button class="signin">Sign in</button>
+				<div id="cartcontainer">
+					<img class="cart" src="assets/cart.png">
+					<span class="cartcaption"> Cart </span>
+				</div>
+			</div>
+		</div>
+		<div id="navbar">
+			<div id="nav">
+				<a class="navlink" href="#">Clothing & Accessories</a>
+				<a class="navlink" href="#">Jewelry</a>
+				<a class="navlink" href="#">Craft Supplies & Tools</a>
+				<a class="navlink" href="#">Weddings</a>
+				<a class="navlink" href="#">Entertainment</a>
+				<a class="navlink" href="#">Home & Living</a>
+				<a class="navlink" href="#">Kids & Baby</a>
+				<a class="navlink" href="#">Vintage</a>
+			</div>
+		</div>
+		<span class="searchresults"> All catergories > "whiskey" (31,879 Results)</span>
+		<div id="app">
+			<span class="results"> Show results for : </span>
+				<div id="categories">
+					<span class="catetitle"> All categories </span>
+					<ul class="categorylist">
+						<li><a class="caterlink" href="#">Home & Living</a></li>
+						<li><a class="caterlink" href="#">Art & Collectables</a></li>
+						<li><a class="caterlink" href="#">Weddings</a></li>
+						<li><a class="caterlink" href="#">Clothing</a></li>
+						<li><a class="caterlink" href="#">Paper & Party Supplies</a></li>
+						<li><a class="caterlink" href="#">Jewelry</a></li>
+						<li><a class="caterlink" href="#">Accessories</a></li>
+						<li><a class="caterlink" href="#">Craft Supplies & Tools</a></li>
+						<li><a class="caterlink" href="#">Bags & Purses</a></li>
+						<li><a class="caterlink" href="#">Bath & Beauty</a></li>
+						<li><a class="caterlink" href="#">Shoes</a></li>
+						<li><a class="caterlink" href="#">Books, Movies & Music</a></li>
+						<li><a class="caterlink" href="#">Electronics & Accessories</a></li>
+						<li><a class="caterlink" href="#">Toys & Games</a></li>
+						<li><a class="caterlink" href="#">Pet Supplies</a></li>
+					</ul>
+				</div>
+			<span class="refine"> Refine your search</span> 
+			<div id="sidesearch">
+				<div class="itemtype">
+					<span class="type">Item Type</span>
+					<form class="Rbuttons">
+					  <input type="radio" name="item" value="AllItems"> All items<br>
+					  <input type="radio" name="item" value="Handmade"> Handmade<br>
+					  <input type="radio" name="item" value="Vintage"> Vintage
+					</form>
+				</div>
+				<div class="pricesearch">
+					<span class="price"> Price ($)</span>
+					<form class="pricefilter">
+						<input id="pricelow" type="text" name="low" placeholder="Low">
+						<span> to </span>
+						<input id="pricehigh" type="text" name="high" placeholder="High">
+						<button class="enter"> </button>
+					</form>
+				</div>
+				<div class="colorselect">
+					<span class="colors">Filter by color</span>
+					<div class="color1"></div>
+					<div class="color2"></div>
+					<div class="color3"></div>
+					<div class="color4"></div>
+					<div class="color5"></div>
+					<div class="color6"></div>
+					<div class="color7"></div>
+					<div class="color8"></div>
+				</div>
+				<div class="order">
+					<span class="ordercap">Ordering options</span>
+					<form>
+						<input type="checkbox" name="order" value="gift"> Accepts Etsy gift cards<br>
+						<input type="checkbox" name="order" value="custom"> Customizable
+					</form>
+				</div>
+				<div class="shopping">
+					<span class="shop"> Shop location</span><br>
+					<input type="radio" name="shop" value="Any"> Anywhere<br>
+					<input type="radio" name="shop" value="US"> United states<br>
+					<span class="location">Choose a custom location </span>
+				</div>
+				<div class="shipping">
+					<span class="ship">Ship to</span><br>
+					<select name="country">
+		  				<option value="country">United States</option>
+		  			</select>
+				</div>
+			</div>
+			<div id="mainpage">
+			<!--	<div class="photo">
+					<img class="whiskey" src="https://img0.etsystatic.com/108/0/11746035/il_570xN.867237614_7y43.jpg">
+					<span class="caption">caption</span><br>
+					<span class="desc"> desc </span>
+					<span class="picprice"> price </span>
+				</div> -->
+			</div>
+		</div>
+		<script type="text" id="template">
+			{{#results}}
+			<div class="photo">
+				<img class="whiskey" src="{{Images.0.url_570xN}}">
+				<div class="caption">{{title}}</div>
+				<span class="desc"> {{category_path}} </span>
+				<span class="picprice">${{price}} USD </span>
+			</div>
+			{{/results}}			
+		</script>
+	<script   src="https://code.jquery.com/jquery-1.12.1.min.js"   integrity="sha256-I1nTg78tSrZev3kjvfdM5A5Ak/blglGzlaZANLPDl3I="   crossorigin="anonymous"></script>
+	<script src="js/data.js"></script>
+	<script src="js/mustache.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
