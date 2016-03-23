@@ -120,10 +120,14 @@
 		<script type="text" id="template">
 			{{#results}}
 			<div class="photo">
-				<img class="whiskey" src="{{Images.0.url_570xN}}">
+				<img class="whiskey" src="{{Images.0.url_570xN}}"/>
 				<div class="caption">{{title}}</div>
 				<span class="desc"> {{category_path}} </span>
 				<span class="picprice">${{price}} USD </span>
+				<div class="icons">
+					<img class="heart" src="assets/heart.png"/>
+					<img class="hamburger" src="assets/hamburger.png"/>
+				</div>
 			</div>
 			{{/results}}			
 		</script>

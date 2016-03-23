@@ -398,6 +398,7 @@ select[name=country] {
 .whiskey {
 	height: 180px;
     width: 223px;
+    cursor: pointer;
 }
 
 .caption {
@@ -425,4 +426,30 @@ select[name=country] {
     left: 597px;
     font-size: 12px;
 }
+
+.icons {
+	position: relative;
+	top: -204px;
+    left: 171px;
+    opacity: 0;
+}
+
+.photo:hover .icons {
+	opacity: 1;
+}
+
+.heart {
+	height: 20px;
+	width: 20px;
+	background: white;
+	border: 1px solid gray;
+	border-radius: 2px;
+}
+
+.hamburger {
+	height: 20px;
+	width: 20px;
+	background: white;
+	border: 1px solid gray;
+	border-radius: 2px;
 }
